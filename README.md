@@ -1,6 +1,6 @@
 # julia
 
-A collection of notebooks, tutorials and experiments that I play with while diving into Julia.
+A collection of notebooks[^1], tutorials and experiments that I play with while diving into Julia.
 
 ### Resources
 * [Whirlwind intro to Julia](https://www.youtube.com/watch?v=8h8rQyEpiZA&t=7898s)
@@ -17,3 +17,5 @@ A collection of notebooks, tutorials and experiments that I play with while divi
 * [What Julia Offers Academic Researchers](https://www.youtube.com/watch?v=C4dMYHzW-SY&t=443s) (talk)
 * [Wrote a textbook using Julia](https://www.youtube.com/watch?v=ofWy5kaZU3g) (talk)
 * [Julia for Biologists](https://www.youtube.com/watch?v=gRj7E5kYG1I&t=1937s) (talk)
+
+[^1]: To view (static) rendered notebooks: open the HTML version of the notebook, copy the URL, and use [this tool](https://raw.githack.com/) 
