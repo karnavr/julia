@@ -14,11 +14,17 @@ macro bind(def, element)
     end
 end
 
-# ╔═╡ fbe11200-e938-11ea-12e9-6125c1b56b25
+# ╔═╡ de373816-ec79-11ea-2772-ebdca52246ac
 begin
-	Pkg.add("PlutoUI")
-	using PlutoUI
+	import Pkg
+	Pkg.activate(mktempdir())
 end
+
+# ╔═╡ a2ad6a2c-71e0-4f2e-b4b3-02d05a2d48fb
+using Images
+
+# ╔═╡ fbe11200-e938-11ea-12e9-6125c1b56b25
+using PlutoUI
 
 # ╔═╡ 5e688928-e939-11ea-0e16-fbc80af390ab
 using LinearAlgebra
@@ -76,6 +82,9 @@ md"""# Module 1: Images"""
 
 # ╔═╡ 37c1d012-ebc9-11ea-2dfe-8b86bb78f283
 4 + 4
+
+# ╔═╡ 86acd774-b6c1-48a4-8293-159421148a98
+
 
 # ╔═╡ a0a97214-e8d2-11ea-0f46-0bfaf016ab6d
 md"""## Data takes many forms
@@ -168,12 +177,6 @@ md"""## If in doubt: Ask Julia!
 - Let's use the `Images.jl` package to load an image and see what we get
 """
 
-# ╔═╡ de373816-ec79-11ea-2772-ebdca52246ac
-# begin
-# 	import Pkg
-# 	Pkg.activate(mktempdir())
-# end
-
 # ╔═╡ 552129ae-ebca-11ea-1fa1-3f9fa00a2601
 # begin
 # 	Pkg.add(["Images", "ImageIO", "ImageMagick"])
@@ -233,7 +236,7 @@ $(HTML("<br>"))
 size(philip)
 
 # ╔═╡ ef60fcc4-ebca-11ea-3f69-155afffe8ea8
-philip
+philip # we know image is taller than it is wide — first number must be height (rows)
 
 # ╔═╡ fac550ec-ebca-11ea-337a-dbc16848c617
 philip[1:1000, 1:400]
@@ -348,7 +351,7 @@ for i in 1:100
 end
 
 # ╔═╡ 5978db50-e936-11ea-3145-059a51be2281
-md"Note that `for` loops *do not return anything* (or, rather, they return `nothing`)"
+md"Note that `for` loops *do not return anything* (or, rather, they return `nothing`), which is why we don't see any output in the cell above."
 
 # ╔═╡ 21638b14-ebcc-11ea-1761-bbd2f4306a96
 new_phil
@@ -385,15 +388,15 @@ md"## Modifying the whole image at once
 "
 
 # ╔═╡ 31f3605a-e938-11ea-3a6d-29a185bbee31
-function redify(c)
-	return RGB(c.r, 0, 0)
+function redify(color)
+	return RGB(color.r, 0, 0)
 end
 
 # ╔═╡ 2744a556-e94f-11ea-2434-d53c24e59285
 begin
 	color = RGB(0.9, 0.7, 0.2)
 	
-	[color, redify(color)]
+	[color, redify(color)] # display original color, and only red portion of the color
 end
 
 # ╔═╡ 98412a36-e93b-11ea-1954-f1c105c6ed4a
@@ -448,6 +451,9 @@ decimate(image, ratio=5) = image[1:ratio:end, 1:ratio:end]
 
 # ╔═╡ 41fa85c0-e939-11ea-1ad8-79805a2083bb
 poor_phil = decimate(head, 5)
+
+# ╔═╡ bf9193cf-3d35-4161-816e-8dda468b785b
+size(poor_phil)
 
 # ╔═╡ cd5721d0-ede6-11ea-0918-1992c69bccc6
 repeat(poor_phil, repeat_count, repeat_count)
@@ -726,6 +732,7 @@ grant = decimate(process_raw_camera_data(raw_camera_data), 2)
 # ╟─4fc58814-e94b-11ea-339b-cb714a63f9b6
 # ╟─f067d3b8-e8c8-11ea-20cb-474709ffa99a
 # ╠═37c1d012-ebc9-11ea-2dfe-8b86bb78f283
+# ╠═86acd774-b6c1-48a4-8293-159421148a98
 # ╟─a0a97214-e8d2-11ea-0f46-0bfaf016ab6d
 # ╟─1697a756-e93d-11ea-0b6e-c9c78d527993
 # ╟─af28faca-ebb7-11ea-130d-0f94bf9bd836
@@ -742,6 +749,7 @@ grant = decimate(process_raw_camera_data(raw_camera_data), 2)
 # ╟─0ad91f1e-e8d2-11ea-2c18-93f66c906a8b
 # ╠═de373816-ec79-11ea-2772-ebdca52246ac
 # ╠═552129ae-ebca-11ea-1fa1-3f9fa00a2601
+# ╠═a2ad6a2c-71e0-4f2e-b4b3-02d05a2d48fb
 # ╠═54c1ba3c-e8d2-11ea-3564-bdaca8563738
 # ╠═6e0fefb6-e8d4-11ea-1f9b-e7a3db40df39
 # ╠═9c359212-ec79-11ea-2d7e-0124dad5f127
@@ -790,6 +798,7 @@ grant = decimate(process_raw_camera_data(raw_camera_data), 2)
 # ╠═3c32efde-e938-11ea-1ae4-5d88290f5311
 # ╟─4b26e4e6-e938-11ea-2635-6d4fc15e13b7
 # ╠═41fa85c0-e939-11ea-1ad8-79805a2083bb
+# ╠═bf9193cf-3d35-4161-816e-8dda468b785b
 # ╟─c12e0928-e93b-11ea-0922-2b590a99ee89
 # ╟─ff5dc538-e938-11ea-058f-693d6b016640
 # ╠═fbe11200-e938-11ea-12e9-6125c1b56b25
@@ -800,7 +809,7 @@ grant = decimate(process_raw_camera_data(raw_camera_data), 2)
 # ╟─5e688928-e939-11ea-0e16-fbc80af390ab
 # ╟─58184d88-e939-11ea-2fc8-73b3476ebe92
 # ╟─2dd09f16-e93a-11ea-2cdc-13f558e3391d
-# ╟─df1b7996-e93b-11ea-1a3a-81b4ec520679
+# ╠═df1b7996-e93b-11ea-1a3a-81b4ec520679
 # ╟─b8daeea0-ec79-11ea-34b5-3f13e8a56a42
 # ╟─bf1bb2c8-ec79-11ea-0671-3ffb34828f3c
 # ╟─69e3aa82-e93c-11ea-23fe-c1103d989cba
