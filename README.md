@@ -7,7 +7,7 @@ A collection of notebooks, tutorials and experiments that I play with while divi
 * [Package manager overview](https://www.youtube.com/watch?v=76KL8aSz0Sg)
 
 ### Interesting
-* [Computational Thinking | MIT 18.S191 Fall 2020](https://www.youtube.com/playlist?list=PLP8iPy9hna6Q2Kr16aWPOKE0dz9OnsnIJ) (course, pretty sure this is how I originally stumbled upon Julia)
+* [Computational Thinking | MIT 18.S191 Fall 2020](https://www.youtube.com/playlist?list=PLP8iPy9hna6Q2Kr16aWPOKE0dz9OnsnIJ) (course, this is how I originally stumbled upon Julia)
 * [Pluto notebooks](https://www.youtube.com/watch?v=IAF8DjrQSSk) (talk)
 * [The Two Cultures of Programming](https://www.youtube.com/watch?v=C3iR_PknlFc) (talk)
 * [Multiple dispatch](https://www.youtube.com/watch?v=kc9HwsxE1OY&t=1544s) (talk)
