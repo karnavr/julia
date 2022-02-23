@@ -18,4 +18,4 @@ A collection of notebooks[^1], tutorials and experiments that I play with while 
 * [Wrote a textbook using Julia](https://www.youtube.com/watch?v=ofWy5kaZU3g) (talk)
 * [Julia for Biologists](https://www.youtube.com/watch?v=gRj7E5kYG1I&t=1937s) (talk)
 
-[^1]: To view (static) rendered notebooks: open the HTML version of the notebook, copy the URL, and use [this tool](https://raw.githack.com/) 
+[^1]: To view (static) rendered notebooks: open the HTML version of the notebook, copy the URL, and use [this tool](https://raw.githack.com/). This is obviously sub-optimal, so I soon want to create a simple website (probably with github pages) to host all of the notebook files. 
