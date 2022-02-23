@@ -10,7 +10,8 @@ A collection of notebooks[^1], tutorials and experiments that I play with while 
 ### Interesting
 * [Computational Thinking | MIT 18.S191 Fall 2020](https://www.youtube.com/playlist?list=PLP8iPy9hna6Q2Kr16aWPOKE0dz9OnsnIJ) (course, this is how I originally stumbled upon Julia)
   * [Course website](https://computationalthinking.mit.edu/Fall20/)
-  * [Github repo](https://github.com/mitmath/18S191/tree/Fall20) 
+  * [Github repo](https://github.com/mitmath/18S191/tree/Fall20)
+  * [Talk about the course](https://www.youtube.com/watch?v=LFRI3s0DE-o&t=755s) 
 * [Pluto notebooks](https://www.youtube.com/watch?v=IAF8DjrQSSk) (talk)
 * [The Two Cultures of Programming](https://www.youtube.com/watch?v=C3iR_PknlFc) (talk)
 * [Multiple dispatch](https://www.youtube.com/watch?v=kc9HwsxE1OY&t=1544s) (talk)
