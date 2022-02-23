@@ -5,6 +5,7 @@ A collection of notebooks, tutorials and experiments that I play with while divi
 ### Resources
 * [Whirlwind intro to Julia](https://www.youtube.com/watch?v=8h8rQyEpiZA&t=7898s)
 * [Package manager overview](https://www.youtube.com/watch?v=76KL8aSz0Sg) + [Docs](https://pkgdocs.julialang.org/v1/)
+* [Pluto Notebooks FAQ](https://github.com/fonsp/Pluto.jl/wiki)
 
 ### Interesting
 * [Computational Thinking | MIT 18.S191 Fall 2020](https://www.youtube.com/playlist?list=PLP8iPy9hna6Q2Kr16aWPOKE0dz9OnsnIJ) (course, this is how I originally stumbled upon Julia)
