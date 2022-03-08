@@ -17,3 +17,7 @@ Markdown files using a script with contents
 
 Example: `buildmd setup` where the script above is called `buildmd`.
 
+---
+
+This repo was originally cloned from [here](https://github.com/timholy/AdvancedScientificComputing), on March 8th, 2022.
+
